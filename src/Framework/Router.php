@@ -2,7 +2,9 @@
 namespace Framework;
 class Router {
 
-    private function normalizePath(string $path): string
+  private array $routes = [];
+
+  private function normalizePath(string $path): string
   {
     $path = trim($path, '/');
     $path = "/{$path}/";
