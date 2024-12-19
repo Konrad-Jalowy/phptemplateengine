@@ -86,7 +86,7 @@ return [
     ],
     [
         'pattern' => '/\{\"(.*?)\"\}/',
-        'replace' => "<?php echo \"$1\"; ?>"
+        'replace' => "<?php echo htmlspecialchars(\"$1\", ENT_QUOTES); ?>"
        
     ]
     
