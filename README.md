@@ -204,3 +204,39 @@ I made it private. You cant use that to include partials, because... well see in
 ```html
 @partial("head.php")
 ```
+Ok so heres how we render a partial:
+```php
+public function renderPartial(string $path){
+    extract($this->globalTemplateData, EXTR_SKIP);
+    $content = file_get_contents($this->resolve($path));
+    $content = $this->searchAndReplace($content);
+    eval( '?>' . $content );
+
+    return $content;
+}
+```
+And heres how we render a template:
+```php
+public function renderTemplate(string $template, array $data = []){
+
+    extract($data, EXTR_SKIP);
+    extract($this->globalTemplateData, EXTR_SKIP);
+
+    $content = file_get_contents($this->resolve($template));
+
+    $content = $this->searchAndReplace($content);
+    eval( '?>' . $content );
+
+  }
+```
+## Template patterns
+Take a look for yourself, its just regular expressions.  
+
+Heres how we do detials/summary:
+```php
+[
+        'pattern' => '/\[details\=\"(.*?)\"\](.*?)\[\/details\]/s',
+        'replace' => '<details><summary>$1</summary>$2</details>',
+],
+```
+What you see is used by searchAndReplace function. Btw, it should be private, wait a minute...
