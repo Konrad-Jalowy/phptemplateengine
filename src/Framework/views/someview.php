@@ -8,3 +8,8 @@
     <li>{{$person->name}}</li>
 @endforeach
 </ul>
+@if(loggedIn)
+<p>Logout!</p>
+@else
+<p>Log in!</p>
+@endif
