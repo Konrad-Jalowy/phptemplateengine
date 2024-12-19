@@ -36,3 +36,9 @@
 </p>
 
 [details="Click Me"]lorem ipsum bla bla bla[/details]
+
+<form>
+    <label for="name">Your name</label>
+    <input type="text" id="name" name="name">
+    @method("PUT")
+</form>
