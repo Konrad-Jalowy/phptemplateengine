@@ -92,3 +92,13 @@ Actually its pretty usefull bbcode
 ```html
 [details="Click Me"]lorem ipsum bla bla bla[/details]
 ```
+### Header bbcodes
+Less usefull, but why not:
+```html
+[h1]{{$message}}[/h1]
+[h2]{{$message}}[/h2]
+[h3]{{$message}}[/h3]
+[h4]{{$message}}[/h4]
+[h5]{{$message}}[/h5]
+[h6]{{$message}}[/h6]
+```
