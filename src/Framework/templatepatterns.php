@@ -83,6 +83,11 @@ return [
     [
         'pattern' => '/\[i\](.*?)\[\/i\]/s',
         'replace' => '<em>$1</em>',
+    ],
+    [
+        'pattern' => '/\{\"\"\}/',
+        'replace' => 'blablabla'
+       
     ]
     
     ];
