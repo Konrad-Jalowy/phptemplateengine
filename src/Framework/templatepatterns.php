@@ -59,5 +59,9 @@ return [
     [
         'pattern' => '/\[url\=(.*?)\](.*?)\[\/url\]/s',
         'replace' => '<a href="$1">$2</a>',
+    ],
+    [
+        'pattern' => '/\[\*\](.*)/',
+        'replace' => '<li>$1</li>',
     ]
     ];

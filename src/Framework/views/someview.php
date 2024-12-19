@@ -10,7 +10,7 @@
 
 <ul>
 @foreach($people as $person)
-    <li>{{$person->name}}</li>
+    [*]{{$person->name}}
 @endforeach
 </ul>
 @if($loggedIn)
