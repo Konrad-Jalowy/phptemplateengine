@@ -3,7 +3,8 @@
 require __DIR__ .  "/../vendor/autoload.php";
 
 use Framework\TemplateEngine;
-
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+var_dump($uri);
 $people = array(
     (object)["name" => "John Doe"],
     (object)["name" => "Jane Doe"]
