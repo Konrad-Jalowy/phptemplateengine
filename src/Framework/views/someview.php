@@ -19,3 +19,4 @@
 <p>Log in!</p>
 @endif
 <p>Nice search engine: [url]https://www.google.com[/url]</p>
+<p>Nice search engine called [url=https://www.google.com]Google[/url]</p>
