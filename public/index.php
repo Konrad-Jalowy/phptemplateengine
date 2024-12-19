@@ -8,3 +8,4 @@ TemplateEngine::test();
 $frameworkPath = __DIR__ . "/../src/Framework";
 $tempEn = new TemplateEngine($frameworkPath, $frameworkPath . "/templatepatterns.php");
 $tempEn->testInstance();
+$tempEn->presentPatterns();

@@ -17,6 +17,12 @@ class TemplateEngine {
     echo $this->basePath;
   }
 
+  public function presentPatterns(){
+    foreach($this->patterns as $pattern ){
+        print_r($pattern);
+    }
+  }
+
   public static function test(){
     echo "hello world from autoloaded class </br>";
 }
