@@ -50,5 +50,9 @@ public function renderPartial(string $path){
     $this->globalTemplateData[$key] = $value;
   }
 
+  public function getCsrf(){
+    return $this->globalTemplateData["csrfToken"];
+  }
+
   
 }
