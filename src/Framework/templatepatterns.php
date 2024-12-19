@@ -102,5 +102,9 @@ return [
         'replace' => "<?php echo \"$1\"; ?>"
        
     ],
+    [
+        'pattern' => '/\[details\=\"(.*?)\"\](.*?)\[\/details\]/s',
+        'replace' => '<details><summary>$1</summary>$2</details>',
+    ],
     
     ];

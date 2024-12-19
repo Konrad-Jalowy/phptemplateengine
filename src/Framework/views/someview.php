@@ -33,3 +33,5 @@
   [s]Almost[/s] [u][b]every[/b][/u] developer's favorite molecule is C[sub]8[/sub]H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as
   [i]"caffeine."[/i]
 </p>
+
+[details="Click Me"]lorem ipsum bla bla bla[/details]
