@@ -1,0 +1,10 @@
+{
+    "name": "kj/phptemplateengine",
+    "type": "project",
+    "authors": [
+        {
+            "name": "kj"
+        }
+    ],
+    "require": {}
+}
