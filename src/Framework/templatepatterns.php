@@ -7,5 +7,13 @@ return [
     [
         "pattern" => '/\[b\](.*?)\[\/b\]/s',
         "replace" => "<b>$1</b>" 
+    ],
+    [
+        "pattern" => '/@foreach\((.*)\)/',
+        "replace" => "<?php foreach($1) : ?>" 
+    ],
+    [
+        "pattern" => '/@endforeach/s',
+        "replace" => "<?php endforeach; ?>" 
     ]
     ];
