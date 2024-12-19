@@ -111,7 +111,8 @@ return [
         "replace" => "<?php echo \$this->renderPartial(\"views/partials/$1\"); ?>" 
     ],
     [
-        "replace" => "<input type=\"hidden\" id=\"_METHOD\" name=\"_METHOD\" value=\"PUT\" />"
+        "pattern" => '/@method\(\"(.*)\"\)/',
+        "replace" => "<input type=\"hidden\" id=\"_METHOD\" name=\"_METHOD\" value=\"$1\" />"
     ]
     
     ];
