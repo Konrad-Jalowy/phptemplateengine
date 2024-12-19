@@ -18,3 +18,4 @@
 @else
 <p>Log in!</p>
 @endif
+<p>Nice search engine: [url]https://www.google.com[/url]</p>
