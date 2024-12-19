@@ -35,6 +35,21 @@ Of course in final project there will be different way of using it. Like depende
 But here i want to focus on standalone parts without getting distracted by the whole bootstraping of the app, so yeah, dont expect anything other that tempale engine itself here...
 
 ### Detailed explanation
+#### Method spoofing and CSRF token
+Similar to Laravel framework. Heres how we do it:
+```html
+<form>
+    <label for="name">Your name</label>
+    <input type="text" id="name" name="name">
+    @method("PUT")
+    @csrf
+</form>
+```
+CSRF should be set by some middleware as global variable csrfToken. Method spoofer, well should be compatible with the router,
+add shomething like that to your router:
+```php
+ $method = strtoupper($_POST['_METHOD'] ?? $method);
+```
 #### Variable interpolation
 Heres how we do it, variable can come from context or global context:
 ```html
