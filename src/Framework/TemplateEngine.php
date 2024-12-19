@@ -5,9 +5,13 @@ class TemplateEngine {
 
   private array $globalTemplateData = [];
 
-  public function __construct(private string $basePath)
+  protected $patterns = [];
+
+  public function __construct(private string $basePath, $templatePatterns)
   {
+    $this->patterns = include $templatePatterns;
   }
+
 
   public function testInstance(){
     echo $this->basePath;
