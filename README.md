@@ -123,3 +123,10 @@ And anchor bbcodes
 <p>Nice search engine: [url]https://www.google.com[/url]</p>
 <p>Nice search engine called [url=https://www.google.com]Google[/url]</p>
 ```
+
+# Internals
+If you wanna know HOW it works, here are main files youre interested in:
+- TemplateEngine.php <-- engine class
+- templatepatterns.php <-- regex patterns used as template directives
+- views and partials directory that have view and a partial
+- public/index.php, where templating engine is used
