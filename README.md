@@ -40,3 +40,9 @@ Heres how we do it, variable can come from context or global context:
 ```html
 <p>Site name: {{$site_name}}</p>
 ```
+#### String interpolation (safe, unsafe)
+Heres example
+```html
+{"sadsad <b>asdsad</b> asdsad"}
+{!!sadsad <b>asdsad</b> asdsad!!}
+```
