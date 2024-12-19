@@ -63,5 +63,9 @@ return [
     [
         'pattern' => '/\[\*\](.*)/',
         'replace' => '<li>$1</li>',
+    ],
+    [
+        'pattern' => '/\[list\](.*?)\[\/list\]/s',
+        'replace' => '<ul>$1</ul>',
     ]
     ];
