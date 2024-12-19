@@ -106,5 +106,9 @@ return [
         'pattern' => '/\[details\=\"(.*?)\"\](.*?)\[\/details\]/s',
         'replace' => '<details><summary>$1</summary>$2</details>',
     ],
+    [
+        "pattern" => '/@partial\(\"(.*)\"\)/',
+        "replace" => "<?php echo \$this->renderPartial(\"views/partials/$1\"); ?>" 
+    ],
     
     ];

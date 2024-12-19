@@ -1,4 +1,4 @@
-<?php echo $this->renderPartial("views/partials/head.php"); ?>
+@partial("head.php")
 [h1]{{$message}}[/h1]
 [h2]{{$message}}[/h2]
 [h3]{{$message}}[/h3]
