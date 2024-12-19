@@ -185,7 +185,7 @@ private array $globalTemplateData = [];
     $this->patterns = include $templatePatterns;
   }
 
-  public function searchAndReplace($source){
+  private function searchAndReplace($source){
     foreach($this->patterns as $pattern ){
         $source = preg_replace($pattern['pattern'], $pattern['replace'], $source);
     }
@@ -239,4 +239,20 @@ Heres how we do detials/summary:
         'replace' => '<details><summary>$1</summary>$2</details>',
 ],
 ```
-What you see is used by searchAndReplace function. Btw, it should be private, wait a minute...
+What you see is used by searchAndReplace function. 
+Some other examples:
+```php
+[
+        "pattern" => '/@partial\(\"(.*)\"\)/',
+        "replace" => "<?php echo \$this->renderPartial(\"views/partials/$1\"); ?>" 
+    ],
+    [
+        "pattern" => '/@method\(\"(.*)\"\)/',
+        "replace" => "<input type=\"hidden\" id=\"_METHOD\" name=\"_METHOD\" value=\"$1\" />"
+    ],
+    [
+        "pattern" => '/@csrf/',
+        "replace" => "<input type=\"hidden\" id=\"_csrf\" name=\"_csrf\" value=\"<?php echo \$this->getCsrf();?>\" />"
+    ]
+```
+And thats how it works. Have fun!
