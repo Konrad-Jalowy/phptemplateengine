@@ -30,6 +30,13 @@ class TemplateEngine {
     return $source;
 }
 
+//will not work with searchandreplace
+//to be added in views like [phpopening] include $this->resolve("partials/_header.php"); [phpclosing]
+public function resolve(string $path)
+  {
+    return "{$this->basePath}/{$path}";
+  }
+
   public static function test(){
     echo "hello world from autoloaded class </br>";
 }
