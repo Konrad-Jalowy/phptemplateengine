@@ -72,3 +72,12 @@ Heres example
 {"sadsad <b>asdsad</b> asdsad"}
 {!!sadsad <b>asdsad</b> asdsad!!}
 ```
+### If/else/endif
+Similar to Laravel, heres how we do it:
+```html
+@if($loggedIn)
+<p>Logout!</p>
+@else
+<p>Log in!</p>
+@endif
+```
