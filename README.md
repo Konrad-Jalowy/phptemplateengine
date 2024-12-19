@@ -35,3 +35,8 @@ Of course in final project there will be different way of using it. Like depende
 But here i want to focus on standalone parts without getting distracted by the whole bootstraping of the app, so yeah, dont expect anything other that tempale engine itself here...
 
 ### Detailed explanation
+#### Variable interpolation
+Heres how we do it, variable can come from context or global context:
+```html
+<p>Site name: {{$site_name}}</p>
+```
