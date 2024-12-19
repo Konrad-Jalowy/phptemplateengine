@@ -50,6 +50,17 @@ add shomething like that to your router:
 ```php
  $method = strtoupper($_POST['_METHOD'] ?? $method);
 ```
+
+#### Foreach
+Heres how we do foreach, similar to Laravel. Btw, nobody forces you to use bbcodes for lists
+```html
+[list]
+@foreach($people as $person)
+    [*]{{$person->name}}
+@endforeach
+[/list]
+```
+That said, i think li bbcode is actually usefull. You dont have to use closing tag. And if you want some css classes then pass a span to the bbcode.
 #### Variable interpolation
 Heres how we do it, variable can come from context or global context:
 ```html
