@@ -23,6 +23,13 @@ class TemplateEngine {
     }
   }
 
+  public function searchAndReplace($source){
+    foreach($this->patterns as $pattern ){
+        $source = preg_replace($pattern['pattern'], $pattern['replace'], $source);
+    }
+    return $source;
+}
+
   public static function test(){
     echo "hello world from autoloaded class </br>";
 }
