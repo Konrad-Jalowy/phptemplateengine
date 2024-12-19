@@ -51,5 +51,9 @@ return [
     [
         'pattern' => '/\[h6\](.*?)\[\/h6\]/s',
         'replace' => '<h6>$1</h6>',
+    ],
+    [
+        'pattern' => '/\[url\](.*?)\[\/url\]/s',
+        'replace' => '<a href="$1">$1</a>',
     ]
     ];
