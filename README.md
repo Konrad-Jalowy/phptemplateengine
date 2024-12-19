@@ -8,3 +8,30 @@ Ok, so i did such project. LAMP is not my stack anymore, it was long time ago. B
 So i do parts of mvc php framework (like router, template engine and so on) as standalone, one-day projects. Then i plan to somehow combine them into one mvc framework, improve, create something even better than my old project.  
 
 Here we've got templating engine. Dont mind router class, ill do router as a separate project. 
+
+## How it works:
+
+### Quick introduction
+Take a look at this code, should be self-explanatory:
+```php
+$people = array(
+    (object)["name" => "John Doe"],
+    (object)["name" => "Jane Doe"]
+);
+$loggedIn = true;
+
+$frameworkPath = __DIR__ . "/../src/Framework";
+$tempEn = new TemplateEngine($frameworkPath, $frameworkPath . "/templatepatterns.php");
+$tempEn->addGlobal('site_name', 'MyApp');
+$tempEn->addGlobal('csrfToken', 'sadsadsadqwdqdwqd');
+$tempEn->renderTemplate("views/someview.php", [
+    "message" => "hello world", 
+    "people" => $people, 
+    "loggedIn" => $loggedIn
+]);
+```
+Of course in final project there will be different way of using it. Like dependency injection and some other, clever tactics. Ive been there, ive done that (in my old project).  
+
+But here i want to focus on standalone parts without getting distracted by the whole bootstraping of the app, so yeah, dont expect anything other that tempale engine itself here...
+
+### Detailed explanation
