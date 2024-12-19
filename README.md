@@ -136,3 +136,34 @@ You need to run command:
 ```sh
 composer run-server
 ```
+## Index.php
+Dont mind router. Router is a separate mini oneday project, i didnt need router here, i decided to make standalone parts and focus fullu on them.  
+
+Heres code:
+```php
+require __DIR__ .  "/../vendor/autoload.php";
+
+use Framework\TemplateEngine;
+use Framework\Router;
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$router = new Router();
+echo $router->normalizePath($uri);
+$people = array(
+    (object)["name" => "John Doe"],
+    (object)["name" => "Jane Doe"]
+);
+$loggedIn = true;
+
+$frameworkPath = __DIR__ . "/../src/Framework";
+$tempEn = new TemplateEngine($frameworkPath, $frameworkPath . "/templatepatterns.php");
+$tempEn->addGlobal('site_name', 'MyApp');
+$tempEn->addGlobal('csrfToken', 'sadsadsadqwdqdwqd');
+$tempEn->renderTemplate("views/someview.php", [
+    "message" => "hello world", 
+    "people" => $people, 
+    "loggedIn" => $loggedIn
+]);
+```
+So we create instance, we give path to where views are located and path to where templatepatterns are located.
+
+In mvc framework project there will be some mechanism that bootstrap the app. We see here passing some context as well as passing global context. Csrftoken will be passed in a middleware just like in the old project.
