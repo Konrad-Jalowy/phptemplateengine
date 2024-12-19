@@ -87,3 +87,8 @@ Similar to Laravel, heres how we do it:
 <p>Log in!</p>
 @endif
 ```
+### Details and summary
+Actually its pretty usefull bbcode
+```html
+[details="Click Me"]lorem ipsum bla bla bla[/details]
+```
