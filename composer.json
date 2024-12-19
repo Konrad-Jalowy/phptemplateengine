@@ -11,5 +11,8 @@
         "psr-4": {
                 "Framework\\": "src/Framework"
                 }
-     }
+     },
+     "scripts": {
+        "run-server" : "php -S localhost:8000 -t ./public"
+    }
 }
