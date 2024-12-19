@@ -130,3 +130,9 @@ If you wanna know HOW it works, here are main files youre interested in:
 - templatepatterns.php <-- regex patterns used as template directives
 - views and partials directory that have view and a partial
 - public/index.php, where templating engine is used
+
+## How to start
+You need to run command:
+```sh
+composer run-server
+```
