@@ -37,6 +37,9 @@ public function resolve(string $path)
   {
     return "{$this->basePath}/{$path}";
   }
+public function renderPartial(string $path){
+    return "not implemented yet";
+}
 
   public function addGlobal(string $key, mixed $value)
   {
