@@ -71,6 +71,10 @@ return [
     [
         'pattern' => '/\[var\](.*?)\[\/var\]/s',
         'replace' => '<var>$1</var>',
+    ],
+    [
+        'pattern' => '/\[sup\](.*?)\[\/sup\]/s',
+        'replace' => '<sup>$1</sup>',
     ]
     
     ];
