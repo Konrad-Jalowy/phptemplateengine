@@ -31,9 +31,8 @@ public function renderTemplate(string $template, array $data = []){
 
   }
 
-//will not work with searchandreplace
-//to be added in views like [phpopening] include $this->resolve("partials/_header.php"); [phpclosing]
-public function resolve(string $path)
+//I made it private bc it cannot be used to include partials (partials wouldnt have interpolation and other stuff)
+private function resolve(string $path)
   {
     return "{$this->basePath}/{$path}";
   }
