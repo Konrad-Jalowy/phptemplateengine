@@ -85,8 +85,8 @@ return [
         'replace' => '<em>$1</em>',
     ],
     [
-        'pattern' => '/\{\"\"\}/',
-        'replace' => 'blablabla'
+        'pattern' => '/\{\"(.*?)\"\}/',
+        'replace' => '<em>$1</em>'
        
     ]
     
