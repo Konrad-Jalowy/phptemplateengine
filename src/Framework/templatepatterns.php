@@ -86,7 +86,7 @@ return [
     ],
     [
         'pattern' => '/\{\"(.*?)\"\}/',
-        'replace' => '<em>$1</em>'
+        'replace' => "<?php echo \"$1\"; ?>"
        
     ]
     
