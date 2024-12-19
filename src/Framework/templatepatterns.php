@@ -27,5 +27,9 @@ return [
     [
         "pattern" => '/@endif/s',
         "replace" => "<?php endif; ?>" 
+    ],
+    [
+        'pattern' => '/\[h1\](.*?)\[\/h1\]/s',
+        'replace' => '<h1>$1</h1>',
     ]
     ];
