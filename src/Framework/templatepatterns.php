@@ -79,6 +79,10 @@ return [
     [
         'pattern' => '/\[sub\](.*?)\[\/sub\]/s',
         'replace' => '<sub>$1</sub>',
+    ],
+    [
+        'pattern' => '/\[i\](.*?)\[\/i\]/s',
+        'replace' => '<em>$1</em>',
     ]
     
     ];
