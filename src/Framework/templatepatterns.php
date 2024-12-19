@@ -67,5 +67,10 @@ return [
     [
         'pattern' => '/\[list\](.*?)\[\/list\]/s',
         'replace' => '<ul>$1</ul>',
+    ],
+    [
+        'pattern' => '/\[var\](.*?)\[\/var\]/s',
+        'replace' => '<var>$1</var>',
     ]
+    
     ];

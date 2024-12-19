@@ -24,5 +24,5 @@
 <p>Nice search engine called [url=https://www.google.com]Google[/url]</p>
 
 <p>
-  <var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var>
+  [var]a<sup>2</sup>[/var] + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var>
 </p>
