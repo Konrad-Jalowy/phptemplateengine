@@ -172,3 +172,35 @@ $tempEn->renderTemplate("views/someview.php", [
 So we create instance, we give path to where views are located and path to where templatepatterns are located.
 
 In mvc framework project there will be some mechanism that bootstrap the app. We see here passing some context as well as passing global context. Csrftoken will be passed in a middleware just like in the old project.
+
+## Template engine
+Take a look at this code:
+```php
+private array $globalTemplateData = [];
+
+  protected $patterns = [];
+
+  public function __construct(private string $basePath, $templatePatterns)
+  {
+    $this->patterns = include $templatePatterns;
+  }
+
+  public function searchAndReplace($source){
+    foreach($this->patterns as $pattern ){
+        $source = preg_replace($pattern['pattern'], $pattern['replace'], $source);
+    }
+    return $source;
+}
+```
+Global data, regex patterns, constructor that we already seen, simple search and replace mechanism, feel free to add some error handling to searchAndReplace.
+Resolve function:
+```php
+private function resolve(string $path)
+  {
+    return "{$this->basePath}/{$path}";
+  }
+```
+I made it private. You cant use that to include partials, because... well see in a minute. For partials you have @partial directive:
+```html
+@partial("head.php")
+```
