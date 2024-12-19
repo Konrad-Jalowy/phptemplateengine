@@ -29,6 +29,6 @@
 </p>
 
 <p>
-  Almost every developer's favorite molecule is C[sub]8[/sub]H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as
+  [s]Almost[/s] [u][b]every[/b][/u] developer's favorite molecule is C[sub]8[/sub]H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as
   [i]"caffeine."[/i]
 </p>
