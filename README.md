@@ -34,8 +34,8 @@ Of course in final project there will be different way of using it. Like depende
 
 But here i want to focus on standalone parts without getting distracted by the whole bootstraping of the app, so yeah, dont expect anything other that tempale engine itself here...
 
-### Detailed explanation
-#### Method spoofing and CSRF token
+## Detailed explanation:
+### Method spoofing and CSRF token
 Similar to Laravel framework. Heres how we do it:
 ```html
 <form>
@@ -51,7 +51,7 @@ add shomething like that to your router:
  $method = strtoupper($_POST['_METHOD'] ?? $method);
 ```
 
-#### Foreach
+### Foreach
 Heres how we do foreach, similar to Laravel. Btw, nobody forces you to use bbcodes for lists
 ```html
 [list]
@@ -61,12 +61,18 @@ Heres how we do foreach, similar to Laravel. Btw, nobody forces you to use bbcod
 [/list]
 ```
 That said, i think li bbcode is actually usefull. You dont have to use closing tag. And if you want some css classes then pass a span to the bbcode.
-#### Variable interpolation
+
+### Partials
+Super easy, heres how we do it:
+```html
+@partial("head.php")
+```
+### Variable interpolation
 Heres how we do it, variable can come from context or global context:
 ```html
 <p>Site name: {{$site_name}}</p>
 ```
-#### String interpolation (safe, unsafe)
+### String interpolation (safe, unsafe)
 Heres example
 ```html
 {"sadsad <b>asdsad</b> asdsad"}
