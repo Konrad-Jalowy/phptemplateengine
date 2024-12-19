@@ -4,7 +4,7 @@ class Router {
 
   private array $routes = [];
 
-  private function normalizePath(string $path): string
+  public function normalizePath(string $path): string
   {
     $path = trim($path, '/');
     $path = "/{$path}/";

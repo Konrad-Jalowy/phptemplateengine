@@ -3,8 +3,10 @@
 require __DIR__ .  "/../vendor/autoload.php";
 
 use Framework\TemplateEngine;
+use Framework\Router;
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-var_dump($uri);
+$router = new Router();
+echo $router->normalizePath($uri);
 $people = array(
     (object)["name" => "John Doe"],
     (object)["name" => "Jane Doe"]
