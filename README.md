@@ -136,6 +136,11 @@ You need to run command:
 ```sh
 composer run-server
 ```
+Basically its that command:
+```sh
+php -S localhost:8000 -t ./public
+```
+Such servers are good for testing some things on local machines. Especially if youre using XAMPP, then you probably have htdocs directory, then each project is subdirectory. Its all fun until you need to have some routing. Then if you want to have some generic routing, without your subdirectory name messing with the url, you need to use command like that (another option is to use htaccess file and redirect all traffic to some entry point)
 ## Index.php
 Dont mind router. Router is a separate mini oneday project, i didnt need router here, i decided to make standalone parts and focus fullu on them.  
 
