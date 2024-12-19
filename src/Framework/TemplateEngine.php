@@ -12,7 +12,7 @@ class TemplateEngine {
     $this->patterns = include $templatePatterns;
   }
 
-  public function searchAndReplace($source){
+  private function searchAndReplace($source){
     foreach($this->patterns as $pattern ){
         $source = preg_replace($pattern['pattern'], $pattern['replace'], $source);
     }
