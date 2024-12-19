@@ -38,7 +38,12 @@ public function resolve(string $path)
     return "{$this->basePath}/{$path}";
   }
 public function renderPartial(string $path){
-    return "not implemented yet";
+    extract($this->globalTemplateData, EXTR_SKIP);
+    $content = file_get_contents($this->resolve($path));
+    $content = $this->searchAndReplace($content);
+    eval( '?>' . $content );
+
+    return $content;
 }
 
   public function addGlobal(string $key, mixed $value)
