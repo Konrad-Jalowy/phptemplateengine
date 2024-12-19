@@ -41,4 +41,5 @@
     <label for="name">Your name</label>
     <input type="text" id="name" name="name">
     @method("PUT")
+    @csrf
 </form>

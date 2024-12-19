@@ -16,7 +16,7 @@ $loggedIn = true;
 $frameworkPath = __DIR__ . "/../src/Framework";
 $tempEn = new TemplateEngine($frameworkPath, $frameworkPath . "/templatepatterns.php");
 $tempEn->addGlobal('site_name', 'MyApp');
-$tempEn->addGlobal('csrftoken', 'sadsadsadqwdqdwqd');
+$tempEn->addGlobal('csrfToken', 'sadsadsadqwdqdwqd');
 $tempEn->renderTemplate("views/someview.php", [
     "message" => "hello world", 
     "people" => $people, 

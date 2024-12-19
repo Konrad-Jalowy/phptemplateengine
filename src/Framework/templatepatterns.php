@@ -113,6 +113,10 @@ return [
     [
         "pattern" => '/@method\(\"(.*)\"\)/',
         "replace" => "<input type=\"hidden\" id=\"_METHOD\" name=\"_METHOD\" value=\"$1\" />"
+    ],
+    [
+        "pattern" => '/@csrf/',
+        "replace" => "<input type=\"hidden\" id=\"_csrf\" name=\"_csrf\" value=\"<?php echo \$this->getCsrf();?>\" />"
     ]
     
     ];
