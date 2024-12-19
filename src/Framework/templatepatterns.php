@@ -88,6 +88,10 @@ return [
         'pattern' => '/\{\"(.*?)\"\}/',
         'replace' => "<?php echo htmlspecialchars(\"$1\", ENT_QUOTES); ?>"
        
+    ],
+    [
+        'pattern' => '/\[u\](.*?)\[\/u\]/s',
+        'replace' => '<u>$1</u>',
     ]
     
     ];
