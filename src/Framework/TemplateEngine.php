@@ -9,6 +9,10 @@ class TemplateEngine {
   {
   }
 
+  public function testInstance(){
+    echo $this->basePath;
+  }
+
   public static function test(){
     echo "hello world from autoloaded class </br>";
 }
