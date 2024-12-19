@@ -102,3 +102,24 @@ Less usefull, but why not:
 [h5]{{$message}}[/h5]
 [h6]{{$message}}[/h6]
 ```
+
+### Some bbcodes
+I added them to the project, maybe theyll be useful.
+Some of them:
+```html
+<p>
+  [var]a[sup]2[/sup][/var] + [var]b[sup]2[/sup][/var] = [var]c[sup]2[/sup][/var]
+</p>
+```
+I think self-explanatory to anyone, who knows HTML. Some more:
+```html
+<p>
+  [s]Almost[/s] [u][b]every[/b][/u] developer's favorite molecule is C[sub]8[/sub]H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as
+  [i]"caffeine."[/i]
+</p>
+```
+And anchor bbcodes
+```html
+<p>Nice search engine: [url]https://www.google.com[/url]</p>
+<p>Nice search engine called [url=https://www.google.com]Google[/url]</p>
+```
