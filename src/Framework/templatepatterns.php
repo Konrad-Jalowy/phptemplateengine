@@ -15,5 +15,17 @@ return [
     [
         "pattern" => '/@endforeach/s',
         "replace" => "<?php endforeach; ?>" 
+    ],
+    [
+        "pattern" => '/@if\((.*)\)/',
+        "replace" => "<?php if ($1) : ?>" 
+    ],
+    [
+        "pattern" => '/@else/',
+        "replace" => "<?php else : ?>" 
+    ],
+    [
+        "pattern" => '/@endif/s',
+        "replace" => "<?php endif; ?>" 
     ]
     ];
