@@ -2,7 +2,7 @@
 [h1]{{$message}}[/h1]
 [h2]{{$message}}[/h2]
 [h3]{{$message}}[/h3]
-[h4]{{$message}}[/h3]
+[h4]{{$message}}[/h4]
 [h5]{{$message}}[/h5]
 [h6]{{$message}}[/h6]
 <?php echo "hello world from php" ?>
