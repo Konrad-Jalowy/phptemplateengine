@@ -6,7 +6,7 @@ return [
     ],
     [
         "pattern" => '/\[b\](.*?)\[\/b\]/s',
-        "replace" => "<b>$1</b>" 
+        "replace" => "<strong>$1</strong>" 
     ],
     [
         "pattern" => '/@foreach\((.*)\)/',
