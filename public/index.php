@@ -5,3 +5,6 @@ require __DIR__ .  "/../vendor/autoload.php";
 use Framework\TemplateEngine;
 
 TemplateEngine::test();
+$frameworkPath = __DIR__ . "/../src/Framework";
+$tempEn = new TemplateEngine($frameworkPath);
+$tempEn->testInstance();
